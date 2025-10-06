@@ -155,6 +155,8 @@ def test_mixed_language_runner():
         build_args = ["-v93"]
     elif sim == "questa":
         test_args = ["-t", "1ps"]
+    elif sim == "riviera":
+        build_args = [Verilog("-dbg"), VHDL("-2008")]
 
     # equivalent to setting the PYTHONPATH environment variable
     sys.path.append(str(proj_path / "tests"))
